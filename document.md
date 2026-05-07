@@ -19,3 +19,137 @@
 
 
 ## 1. ¿Qué es un condicional? 
+
+Un **condicional** en Python es una estructura de control que permite al programa tomar ciertas decisiones. Evalua si una condicion es verdadera **True** o falsa **False** y ejecuta bloques de codigo segun el resultado.
+
+>💡 **Semejanza:** Como cuando decidís que ponerte basandote en el clima; si hace frío te pondrás un abrigo sino no.
+
+### La estructura básica: el **if**
+Es la forma mas simple. Si la condición se cumple (True), el código se ejecuta, sino Python la salta.
+
+```python
+clima = 'sol'
+
+if clima == 'sol':
+    print('Hace un hermoso día soleado, no olvides tus gafas 🕶️')
+
+```
+> 💡 **Tip:** Todo lo que esté "adentro" de un `if` tiene que estar corrido 
+> hacia la derecha. Es la forma que tiene Python de entender qué código 
+> ejecutar y cuál no.
+
+
+### Y si no se cumple? el **else**
+Sirve para dar una alternativa cuando la primera condición es falsa(False).
+
+```python
+clima = 'nublado'
+
+if clima == 'sol':
+    print('Hace un hermoso día soleado, no olvides tus gafas 🕶️')
+else:
+    print('Mejor lleva un paraguas porque parece que va a llover ☔')
+
+```
+
+### Multiples opciones: el **elif**
+Lo usamos si tenemos mas de dos posibilidades. Podemos poner tantos como necesitemos.
+
+```python
+clima = 'frio'
+    
+if clima == 'sol':
+    print('Hace un hermoso día soleado, no olvides tus gafas 🕶️')
+elif clima == 'nublado':
+    print('Mejor lleva un paraguas porque parece que va a llover ☔')
+elif clima == 'ventoso':
+    print('Mejor lleva un rompevientos 🧥🌬️')  
+else:
+    print('Abrigate bien 🧣🧥')      
+
+```
+
+### Para comparar cosas adentro de un **if** usamos **Operadores de condición**
+
+| Operador | Significado | Ejemplo |
+|---|---|---|
+| `==` | Igual a | `5 == 5` → `True` |
+| `!=` | Diferente de | `5 != 3` → `True` |
+| `>` | Mayor que | `7 > 3` → `True` |
+| `<` | Menor que | `2 < 8` → `True` |
+| `>=` | Mayor o igual | `5 >= 5` → `True` |
+| `<=` | Menor o igual | `4 <= 6` → `True` |
+
+### Dicisiones complejas: Operadores lógicos
+
+A menudo tenemos que tomar decisiones basadas en múltiples condiciones. Por ejemplo, podemos querer ejecutar una determinada acción sólo si se cumplen varias condiciones simultáneamente. Alternativamente, podríamos querer desencadenar una acción alternativa si se cumple alguna de varias condiciones.
+
+Python ofrece un conjunto de operadores lógicos **and, or, not** para manejar estos escenarios.
+
+> AND — ambas condiciones deben ser True
+```python
+buen_tiempo = True
+tengo_tiempo = True
+
+if buen_tiempo and tengo_tiempo:
+    print('¡Genial! Vamos al parque 🌳')
+else:
+    print('Me quedo en casa 🏠')
+```
+
+> OR — al menos una condición debe ser True
+```python
+es_domingo = True
+es_feriado = False
+
+if es_domingo or es_feriado:
+    print('Hoy duermo hasta tarde💤')
+```
+
+> NOT — invierte el valor booleano
+```python
+llueve = False
+
+if not llueve:
+    print('Podemos salir a pasear🚶‍➡️')
+```
+
+**💡 Tip: El operador not es como el "mundo al revés". Si algo es falso, el not lo vuelve verdadero para que el if pueda entrar a ejecutar el código.**
+
+
+## 2. ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
+
+Un **bucle** es una estructura que permite ejecutar un bloque de código varias veces de manera automática.
+
+¿Por qué son útiles?
+> **Ahorran tiempo:** No tienes que escribir la misma línea de código una y otra vez.
+> **Evitan errores:** Menos código escrito a mano significa menos probabilidad de equivocarse.
+> **Procesan grandes datos:** Son esenciales para recorrer listas de miles de nombres, precios o mensajes.
+
+> 💡 **Sin bucles**, para imprimir los números del 1 al 100 tendrías que escribir 100 líneas. **Con bucles**, solo necesitas 2.
+
+### Tipos de Bucles:
+
+> 1. El bucle **for**:
+Se utiliza para **iterar sobre una secuencia** (lista, tupla, cadena, rango, etc.). Se sabe de antemano cuántas veces se va a repetir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 3. ¿Qué es una lista por comprensión en Python?
+
+## 4. ¿Qué es un argumento en Python?
+
+## 5. ¿Qué es una función Lambda en Python?
+
+## 6. ¿Qué es un paquete pip?
+
