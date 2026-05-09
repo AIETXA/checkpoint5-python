@@ -175,9 +175,50 @@ for i in range(10):
 
 ## 3. ¿Qué es una lista por comprensión en Python?
 
+Es una forma elegante, compacta y rápida de crear una nueva lista basándose en otra secuencia, en solamente una línea de código.
+> 💡 Lo que antes tomaba 5 líneas, con comprensión se escribe en 1.
+
+**Sintaxis:** 
+```python 
+nueva_lista = [expresion    for elemento in secuencia]
+                ¿qué hago?          ¿de dónde?  
+```
+
+**Forma larga:**
+```python
+numeros = [1,2,3,4]
+duplicados = []
+
+for n in numeros:
+    duplicados.append(n*2)
+```
+
+**Forma corta:**
+```python
+duplicados = [n*2 for n in numeros]
+```
+
+Traducido en palabras:
+`[n*2         for n        in numeros]`
+>*"el doble  de cada n  que esta en numeros"*
+
+También podemos agregar **condicionales** que actúan como filtros. Por ejemplo si solo queremos duplicar los números pares que hay en la lista. 
+
+```python
+duplicados_pares = [n*2 for n in numeros if n%2 == 0]
+```
+En palabras: 
+`[n*2 for n in numeros if n%2 == 0]`
+>*"el doble de cada n que está en numeros pero solo si n es par"*
+
+
 ## 4. ¿Qué es un argumento en Python?
 
+
+
+
 ## 5. ¿Qué es una función Lambda en Python?
+
 
 ## 6. ¿Qué es un paquete pip?
 
