@@ -214,9 +214,64 @@ En palabras:
 
 ## 4. ¿Qué es un argumento en Python?
 
+Es el valor real que se envía a una función cuando se la invoca o llama. Los argumentos permiten pasar datos hacia el interior de la función para que ésta realice operaciones con ellos.
+Hay que diferenciar los **argumentos** de los **parámetros**, porque es común que nos confundamos.
 
+> 🧑‍🍳 Imaginá que la función es una receta de cocina:
+> - **Parámetro** → el nombre del ingrediente en la receta: *"ingrediente"*
+> - **Argumento** → el valor real que usás al cocinar: *"maicena"*
 
+```python
+def receta(nombre):  # 'nombre' es el PARÁMETRO
+    print(f'Hoy vamos a hacer {nombre}') 
 
+receta('Alfajores de maicena')  # 'Alfajores de maicena' es el ARGUMENTO
+
+```
+### Tipos de argumentos:
+
+1. **Argumentos posicionales:**
+Son los más comunes. Se asignan a los parámetros en el mismo orden en el que se envían.
+```python
+def describir_persona(nombre, edad):
+    print(f"{nombre} tiene {edad} años.")
+
+describir_persona("Ana", 25)  # Correcto: Ana tiene 25 años.
+describir_persona(25, "Ana")  # Incorrecto: 25 tiene Ana años.
+```
+
+2. **Argumentos de Palabra clave(keywords):**
+Permiten enviar los valores indicando explícitamente el nombre del parámetro seguido del signo = . Al usarlos, el orden de los factores no altera el resultado.
+```python
+describir_persona(edad=25, nombre="Ana")  # Funciona perfectamente igual
+```
+
+3. **Argumentos por defecto:**
+Podes asignar un valor predeterminado a un parámetro al definir la función. Si al llamarla no proporcionas ese argumento, Python utilizará el valor por defecto.
+```python
+def saludar_pais(nombre, pais="España"):
+    print(f"Hola {nombre} de {pais}")
+
+saludar_pais("Luis")             # Usa el defecto: Hola Luis de España
+saludar_pais("Luis", "México")   # Sobrescribe el defecto: Hola Luis de México
+``` 
+
+4. **Argumentos variables(*args, **kwargs)**
+Se utilizan cuando no sabes de antemano cuántos argumentos va a recibir la función.
+- `*args` -> es una forma de decirle a una función "acepta todos los argumentos que te manden sin importar cuantos sean". Los recibe como una **tupla**
+
+- `**kwargs` -> es lo mismo pero pasa argumentos nombrados y los recibe como un **diccionario.**
+
+```python
+def sumar(*args):
+    print(args)  # (1, 2, 3) ← tupla
+
+def presentar(**kwargs):
+    print(kwargs)  # {'nombre': 'Ana', 'edad': 25} ← diccionario
+
+sumar(1, 2, 3)
+presentar(nombre="Ana", edad=25)
+```
 ## 5. ¿Qué es una función Lambda en Python?
 
 
