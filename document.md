@@ -122,26 +122,54 @@ if not llueve:
 Un **bucle** es una estructura que permite ejecutar un bloque de código varias veces de manera automática.
 
 ¿Por qué son útiles?
-> **Ahorran tiempo:** No tienes que escribir la misma línea de código una y otra vez.
-> **Evitan errores:** Menos código escrito a mano significa menos probabilidad de equivocarse.
-> **Procesan grandes datos:** Son esenciales para recorrer listas de miles de nombres, precios o mensajes.
+- **Ahorran tiempo:** No tienes que escribir la misma línea de código una y otra vez.
+- **Evitan errores:** Menos código escrito a mano significa menos probabilidad de equivocarse.
+- **Procesan grandes datos:** Son esenciales para recorrer listas de miles de nombres, precios o mensajes.
 
 > 💡 **Sin bucles**, para imprimir los números del 1 al 100 tendrías que escribir 100 líneas. **Con bucles**, solo necesitas 2.
 
 ### Tipos de Bucles:
 
-> 1. El bucle **for**:
-Se utiliza para **iterar sobre una secuencia** (lista, tupla, cadena, rango, etc.). Se sabe de antemano cuántas veces se va a repetir.
+* 1. El bucle **for** (iteración definida):
+Se utiliza para repetir una acción varias veces, recorriendo elementos de una colección(lista, tupla, cadena, rango, etc.). Se sabe de antemano cuántas veces debe ejecutarse el código.
 
+**Sintaxis:** ```for variable in secuencia```
+**Uso con range():** Para repetir un código un número específico de veces.
 
+```python
+# Imprimir números del 0 al 4
+for i in range(5):
+    print(i)
+```    
 
+* 2. El bucle **while** (iteración indefinida):
+Ejecuta un bloque de código continuamente mientras una condición booleana sea True. Se usa cuando no sabes exactamente cuando terminará la repetición.
 
+**Sintáxis:** ```while condición```
+**Importante:** Se debe actualizar la condición dentro del bucle para evitar un bucle infinito.
+```python
+# Imprimir números mientras i sea menor a 5
+i = 0
+while i < 5:
+    print(i)
+    i += 1
 
+```
 
+#### Mecanismos de control de bucles:
+- **break:** rompe y sale del bucle inmediatamente.
+- **continue:** salta la iteración actual y pasa a la siguiente.
+- **else:** se ejecuta cuando el bucle finaliza normalmente.
 
-
-
-
+Ejemplo: 
+```python
+for i in range(10):
+    if i == 5:
+        break  # Se detiene en el 5
+    if i % 2 == 0:
+        continue  # Se salta los números pares
+    print(i)
+```
 
 
 
