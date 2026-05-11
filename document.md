@@ -272,7 +272,69 @@ def presentar(**kwargs):
 sumar(1, 2, 3)
 presentar(nombre="Ana", edad=25)
 ```
+
+
 ## 5. ¿Qué es una función Lambda en Python?
+Es una función anónima(no tiene nombre) que se define en una sola línea de código. Devuelve el resultado automaticamente, sin necesidad de return. Puede recibir cualquier número de argumentos. Es útil cuando necesitamos funciones rápidas y temporales.
+**Sintaxis:** 
+```python
+lambda argumentos: expresion
+```
+
+#### Comparación entre `def` y `lambda`:
+
+- Usando `def`
+```python
+def sumar_diez(n):
+    return n + 10
+
+print(sumar_diez(5)) # Resultado: 15
+```
+
+- Usando `lambda`
+```python
+sumar_diez = lambda n : n + 10
+
+print(sumar_diez(5)) # Resultado: 15
+```
+
+Aunque puedes asignar una lambda a una variable (como en el ejemplo anterior), su verdadero poder aparece cuando las pasas como argumentos a otras funciones, especialmente con filter(), map() o sort().
+
+Ejemplo con `filter()`
+```python
+numeros = [1, 2, 3, 4, 5, 6]
+pares = list(filter(lambda x: x % 2 == 0, numeros))
+
+print(pares) # [2, 4, 6]
+```
+
+Ejemplo con `map()`
+```python
+numeros = [1, 2, 3, 4, 5, 6]
+duplicados = list(map(lambda x: x * 2, numeros))
+print(duplicados)  # [2, 4, 6, 8, 10, 12]
+```
+
+Ejemplo con `sort()`
+```python
+personas = [('Carlos', 30), ('Ana', 25), ('Luis', 35)]
+personas.sort(key=lambda x: x[1])
+print(personas)  # [('Ana', 25), ('Carlos', 30), ('Luis', 35)]
+```
+
+#### 📋 Tabla comparativa
+
+| | `def` | `lambda` |
+|---|---|---|
+| Nombre | Sí | No (anónima) |
+| Líneas | Múltiples | Una sola |
+| `return` | Explícito | Automático |
+| Uso ideal | Funciones complejas | Funciones rápidas y temporales |
+
+
+
+
+
 
 
 ## 6. ¿Qué es un paquete pip?
