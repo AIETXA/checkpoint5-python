@@ -131,7 +131,7 @@ Un **bucle** es una estructura que permite ejecutar un bloque de código varias 
 
 ### Tipos de Bucles:
 
-* I. El bucle `**for**` (iteración definida):
+* I. El bucle `for` (iteración definida):
 Se utiliza para repetir una acción varias veces, recorriendo elementos de una colección(lista, tupla, cadena, rango, etc.). Se sabe de antemano cuántas veces debe ejecutarse el código.
 
 > **Sintaxis:** ```for variable in secuencia```
@@ -144,7 +144,7 @@ for i in range(5):
     print(i)
 ```    
 
-* II. El bucle `**while**` (iteración indefinida):
+* II. El bucle `while` (iteración indefinida):
 Ejecuta un bloque de código continuamente mientras una condición booleana sea True. Se usa cuando no sabes exactamente cuando terminará la repetición.
 
 > **Sintáxis:** ```while condición```
@@ -263,7 +263,7 @@ saludar_pais("Luis")             # Usa el defecto: Hola Luis de España
 saludar_pais("Luis", "México")   # Sobrescribe el defecto: Hola Luis de México
 ``` 
 
-4. **Argumentos variables(*args, **kwargs)**
+4. **Argumentos variables**(*args, **kwargs)
 
 Se utilizan cuando no sabes de antemano cuántos argumentos va a recibir la función.
 - `*args` -> es una forma de decirle a una función "acepta todos los argumentos que te manden sin importar cuantos sean". Los recibe como una **tupla**
@@ -285,7 +285,7 @@ presentar(nombre="Ana", edad=25)
 ## 5. ¿Qué es una función Lambda en Python?
 
 Es una función anónima(no tiene nombre) que se define en una sola línea de código. Devuelve el resultado automaticamente, sin necesidad de return. Puede recibir cualquier número de argumentos. Es útil cuando necesitamos funciones rápidas y temporales.
-**Sintaxis:** 
+> **Sintaxis:** 
 ```python
 lambda argumentos: expresion
 ```
@@ -350,7 +350,7 @@ Diferencias:
 **Paquete:** un paquete es el conjunto de archivos de código ya escrito por otros desarrolladores que nos ayudan a resolver problemas.
 **pip:** es la herramienta que nos permite poder obtener ese paquete, descargarlo.
 
-💡 Si comparamos a Python con un smartphone, pip sería la "App Store" o "Google Play Store", y los paquetes serían las aplicaciones que descargas para añadir nuevas funciones.
+> 💡 Si comparamos a Python con un smartphone, pip sería la "App Store" o "Google Play Store", y los paquetes serían las aplicaciones que descargas para añadir nuevas funciones.
 
 Los comandos básicos que se usan son:
 
