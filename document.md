@@ -333,9 +333,32 @@ print(personas)  # [('Ana', 25), ('Carlos', 30), ('Luis', 35)]
 
 
 
-
-
-
-
 ## 6. ¿Qué es un paquete pip?
+
+En términos sencillos, pip es el instalador de paquetes estándar para Python. Es la herramienta que te permite descargar e instalar bibliotecas, módulos y dependencias que no vienen incluidos por defecto cuando instalas Python.
+
+Diferencias:
+**Paquete:** un paquete es el conjunto de archivos de código ya escrito por otros desarrolladores que nos ayudan a resolver problemas.
+**pip:** es la herramienta que nos permite poder obtener ese paquete, descargarlo.
+
+💡 Si comparamos a Python con un smartphone, pip sería la "App Store" o "Google Play Store", y los paquetes serían las aplicaciones que descargas para añadir nuevas funciones.
+
+Los comandos básicos que se usan son:
+
+| Objetivo | Comando |
+|---|---|
+| Instalar un paquete | `pip install nombre_del_paquete` |
+| Desinstalar un paquete | `pip uninstall nombre_del_paquete` |
+| Ver qué tienes instalado | `pip list` |
+| Actualizar un paquete | `pip install --upgrade nombre_del_paquete` |
+
+### Ejemplo real
+```bash
+pip install requests
+```
+```python
+import requests
+respuesta = requests.get('https://api.github.com')
+print(respuesta.status_code)  # 200
+```
 
