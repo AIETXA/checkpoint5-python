@@ -1,9 +1,9 @@
-#🐍 Documentación Python para CheckPoint 5
+## 🐍 Documentación Python para CheckPoint 5
 
-> **Autor:** Ailén
-> **Nivel:** Iniciación
-> **Formato:** Markdown
-> **Fecha:** Mayo 2026
+- **Autor:** Ailén
+- **Nivel:** Iniciación
+- **Formato:** Markdown
+- **Fecha:** Mayo 2026
 
 ---
 
@@ -20,12 +20,12 @@
 
 ## 1. ¿Qué es un condicional? 
 
-Un **condicional** en Python es una estructura de control que permite al programa tomar ciertas decisiones. Evalua si una condicion es verdadera **True** o falsa **False** y ejecuta bloques de codigo segun el resultado.
+Un **condicional** en Python es una estructura de control que permite al programa tomar ciertas decisiones. Evalúa si una condición es verdadera **True** o falsa **False** y ejecuta bloques de código según el resultado.
 
 >💡 **Semejanza:** Como cuando decidís que ponerte basandote en el clima; si hace frío te pondrás un abrigo sino no.
 
-### La estructura básica: el **if**
-Es la forma mas simple. Si la condición se cumple (True), el código se ejecuta, sino Python la salta.
+### La estructura básica: el `if`
+Es la forma mas simple. Si la condición se cumple(True), el código se ejecuta, sino Python la salta.
 
 ```python
 clima = 'sol'
@@ -39,7 +39,7 @@ if clima == 'sol':
 > ejecutar y cuál no.
 
 
-### Y si no se cumple? el **else**
+### Y si no se cumple? el `else`
 Sirve para dar una alternativa cuando la primera condición es falsa(False).
 
 ```python
@@ -52,7 +52,7 @@ else:
 
 ```
 
-### Multiples opciones: el **elif**
+### Múltiples opciones: el `elif`
 Lo usamos si tenemos mas de dos posibilidades. Podemos poner tantos como necesitemos.
 
 ```python
@@ -69,7 +69,7 @@ else:
 
 ```
 
-### Para comparar cosas adentro de un **if** usamos **Operadores de condición**
+### Para comparar cosas adentro de un `if` usamos **Operadores de condición**
 
 | Operador | Significado | Ejemplo |
 |---|---|---|
@@ -117,6 +117,7 @@ if not llueve:
 **💡 Tip: El operador not es como el "mundo al revés". Si algo es falso, el not lo vuelve verdadero para que el if pueda entrar a ejecutar el código.**
 
 
+
 ## 2. ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
 
 Un **bucle** es una estructura que permite ejecutar un bloque de código varias veces de manera automática.
@@ -130,11 +131,12 @@ Un **bucle** es una estructura que permite ejecutar un bloque de código varias 
 
 ### Tipos de Bucles:
 
-* 1. El bucle **for** (iteración definida):
+* I. El bucle `**for**` (iteración definida):
 Se utiliza para repetir una acción varias veces, recorriendo elementos de una colección(lista, tupla, cadena, rango, etc.). Se sabe de antemano cuántas veces debe ejecutarse el código.
 
-**Sintaxis:** ```for variable in secuencia```
-**Uso con range():** Para repetir un código un número específico de veces.
+> **Sintaxis:** ```for variable in secuencia```
+
+> **Uso con range():** Para repetir un código un número específico de veces.
 
 ```python
 # Imprimir números del 0 al 4
@@ -142,11 +144,12 @@ for i in range(5):
     print(i)
 ```    
 
-* 2. El bucle **while** (iteración indefinida):
+* II. El bucle `**while**` (iteración indefinida):
 Ejecuta un bloque de código continuamente mientras una condición booleana sea True. Se usa cuando no sabes exactamente cuando terminará la repetición.
 
-**Sintáxis:** ```while condición```
-**Importante:** Se debe actualizar la condición dentro del bucle para evitar un bucle infinito.
+> **Sintáxis:** ```while condición```
+
+> **Importante:** Se debe actualizar la condición dentro del bucle para evitar un bucle infinito.
 ```python
 # Imprimir números mientras i sea menor a 5
 i = 0
@@ -199,6 +202,7 @@ duplicados = [n*2 for n in numeros]
 ```
 
 Traducido en palabras:
+
 `[n*2         for n        in numeros]`
 >*"el doble  de cada n  que esta en numeros"*
 
@@ -231,6 +235,7 @@ receta('Alfajores de maicena')  # 'Alfajores de maicena' es el ARGUMENTO
 ### Tipos de argumentos:
 
 1. **Argumentos posicionales:**
+
 Son los más comunes. Se asignan a los parámetros en el mismo orden en el que se envían.
 ```python
 def describir_persona(nombre, edad):
@@ -241,12 +246,14 @@ describir_persona(25, "Ana")  # Incorrecto: 25 tiene Ana años.
 ```
 
 2. **Argumentos de Palabra clave(keywords):**
+
 Permiten enviar los valores indicando explícitamente el nombre del parámetro seguido del signo = . Al usarlos, el orden de los factores no altera el resultado.
 ```python
 describir_persona(edad=25, nombre="Ana")  # Funciona perfectamente igual
 ```
 
 3. **Argumentos por defecto:**
+
 Podes asignar un valor predeterminado a un parámetro al definir la función. Si al llamarla no proporcionas ese argumento, Python utilizará el valor por defecto.
 ```python
 def saludar_pais(nombre, pais="España"):
@@ -257,6 +264,7 @@ saludar_pais("Luis", "México")   # Sobrescribe el defecto: Hola Luis de México
 ``` 
 
 4. **Argumentos variables(*args, **kwargs)**
+
 Se utilizan cuando no sabes de antemano cuántos argumentos va a recibir la función.
 - `*args` -> es una forma de decirle a una función "acepta todos los argumentos que te manden sin importar cuantos sean". Los recibe como una **tupla**
 
@@ -275,6 +283,7 @@ presentar(nombre="Ana", edad=25)
 
 
 ## 5. ¿Qué es una función Lambda en Python?
+
 Es una función anónima(no tiene nombre) que se define en una sola línea de código. Devuelve el resultado automaticamente, sin necesidad de return. Puede recibir cualquier número de argumentos. Es útil cuando necesitamos funciones rápidas y temporales.
 **Sintaxis:** 
 ```python
